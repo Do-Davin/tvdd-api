@@ -1,0 +1,22 @@
+meta {
+  name: get users
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{local}}/user?page=0&size=20
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 0
+  size: 20
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
